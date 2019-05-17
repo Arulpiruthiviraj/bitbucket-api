@@ -50,10 +50,10 @@ class Src extends API\Api
      * @param  string           $path     The path can be a filename or a directory path.
      * @return MessageInterface
      */
-    public function raw($account, $repo, $revision, $path)
+  public function raw($account, $repo)
     {
         return $this->requestGet(
-            sprintf('repositories/%s/%s/raw/%s/%s', $account, $repo, $revision, $path)
+            sprintf('repositories/%s/%s/src/master/README.md', $account, $repo)
         );
     }
 }
